@@ -1,22 +1,22 @@
 #include<stdio.h>
-#include<string.h>
 int main()
 {
-    char str[100];
-    int i;
-    scanf("%[^
-]s",str);
-    while(str[i]!=NULL)
+    int n,arr[100][100],i,j;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
     {
-        if(str[i]>=65&&str[i]<=90)
+        for(j=0;j<n;j++)
         {
-            str[i]=str[i]+32;
+            if(i==j)
+            {
+                printf("0");
+            }
+            else
+            {
+                printf("x");
+            }
         }
-        else
-        {
-            str[i]=str[i];
-        }
-        i++;
+        printf("
+");
     }
-    printf("%s",str);
 }
